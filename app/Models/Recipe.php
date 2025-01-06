@@ -31,7 +31,7 @@ class Recipe extends Model
     }
     public function category(): BelongsTo
     {
-        return $this->belongsTo(Recipe::class, 'recipe_id');
+        return $this->belongsTo(Category::class, 'category_id');
     }
     public function photos(): HasMany
     {
