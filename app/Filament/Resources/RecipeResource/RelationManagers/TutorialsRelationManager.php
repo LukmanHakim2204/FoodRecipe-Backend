@@ -28,7 +28,12 @@ class TutorialsRelationManager extends RelationManager
     {
         return $table
             ->recordTitleAttribute('name')
-            ->columns([
+            ->columns([Tables\Columns\TextColumn::make('Squence')
+                ->label('No')
+                ->getStateUsing(function ($rowLoop, $record) {
+                    return $rowLoop->iteration;
+                }),
+
                 Tables\Columns\TextColumn::make('name'),
             ])
             ->filters([
