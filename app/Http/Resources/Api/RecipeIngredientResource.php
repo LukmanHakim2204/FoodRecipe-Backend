@@ -17,7 +17,7 @@ class RecipeIngredientResource extends JsonResource
 
         return [
             'id' => $this->id,
-            'ingredients' => new IngredientResource($this->whenLoaded('ingredient')),
+            'ingredient' => new IngredientResource($this->whenLoaded('ingredient')),
         ];
     }
 }
