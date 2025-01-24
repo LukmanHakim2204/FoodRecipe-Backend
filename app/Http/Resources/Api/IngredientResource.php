@@ -19,6 +19,7 @@ class IngredientResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'photo' => $this->photo,
+            'measure' => $this->measure
 
         ];
     }

@@ -14,6 +14,7 @@ class Ingredient extends Model
     protected $fillable = [
         'name',
         'photo',
+        'measure',
     ];
 
     public function RecipeIngredients(): HasMany

@@ -30,6 +30,9 @@ class IngredientResource extends Resource
                 Forms\Components\FileUpload::make('photo')
                     ->image()
                     ->required(),
+                Forms\Components\TextInput::make('measure')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -40,6 +43,7 @@ class IngredientResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('photo'),
+                Tables\Columns\TextColumn::make('measure'),
             ])
             ->filters([
                 //
